@@ -13,7 +13,7 @@ namespace ArrayListSimpleEx
 {
     public partial class Form1 : Form
     {
-        ArrayList message = new ArrayList();
+        ArrayList sentence = new ArrayList();
         private bool click;
 
         public Form1()
@@ -21,32 +21,34 @@ namespace ArrayListSimpleEx
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            sentence.Add("I");
+            sentence.Add("Love");
+            sentence.Add("Programming");
+            sentence.Add("So");
+            sentence.Add("Much");
+
+        }
+
         private void btnShowMsg_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = message.ToString();
+            lblMessage.Text = string.Join(" ", sentence.ToArray());
         }
 
         private void btnReverse_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = message.ToString();
-
-            txtSecondPos.Focus();
+            lblMessage.Text = string.Join(" ", sentence.ToArray().Reverse());
         }
 
-        private void LoadList()
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            message.Add("I ");
-            message.Add("Love ");
-            message.Add("Programming ");
-            message.Add("So ");
-            message.Add("Much");
+            sentence.Insert(1, txtSecondPos.Text);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            LoadList();
+            sentence.RemoveAt(1);
         }
-
-        
     }
 }
