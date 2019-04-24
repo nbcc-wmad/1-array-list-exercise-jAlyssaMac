@@ -26,6 +26,13 @@ namespace ArrayListSimpleEx
             lblMessage.Text = message.ToString();
         }
 
+        private void btnReverse_Click(object sender, EventArgs e)
+        {
+            lblMessage.Text = message.ToString();
+
+            txtSecondPos.Focus();
+        }
+
         private void LoadList()
         {
             message.Add("I ");
@@ -39,5 +46,7 @@ namespace ArrayListSimpleEx
         {
             LoadList();
         }
+
+        
     }
 }

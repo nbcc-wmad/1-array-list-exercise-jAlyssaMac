@@ -56,6 +56,7 @@
             this.btnReverse.TabIndex = 1;
             this.btnReverse.Text = "Display Message In Reverse";
             this.btnReverse.UseVisualStyleBackColor = true;
+            this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
             // 
             // lblMessage
             // 
