@@ -14,7 +14,6 @@ namespace ArrayListSimpleEx
     public partial class Form1 : Form
     {
         ArrayList sentence = new ArrayList();
-        private bool click;
 
         public Form1()
         {
