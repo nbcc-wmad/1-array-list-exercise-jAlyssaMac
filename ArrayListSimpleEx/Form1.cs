@@ -28,6 +28,7 @@ namespace ArrayListSimpleEx
             sentence.Add("So");
             sentence.Add("Much");
 
+            TestMethod();
         }
 
         private void btnShowMsg_Click(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace ArrayListSimpleEx
         private void button1_Click(object sender, EventArgs e)
         {
             sentence.RemoveAt(1);
+        }
+
+        private void TestMethod()
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
